@@ -1,5 +1,8 @@
 # coffeeflare
 
+> [!WARNING]
+> [Bun](https://bun.sh) runtime is required!
+
 A Cloudflare-themed coffee event announcement TUI built with [Bun](https://bun.sh), [Solid.js](https://solidjs.com), and [OpenTUI](https://github.com/anthropics/opentui).
 
 ## Requirements
