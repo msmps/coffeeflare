@@ -1,0 +1,6 @@
+# Dev/config files not needed in published package
+tsconfig.json
+bun.lock
+.gitignore
+*.log
+.DS_Store

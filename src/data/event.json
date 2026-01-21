@@ -1,0 +1,21 @@
+{
+  "title": "Coffeeflare",
+  "tagline": "Pop in for coffee with the Cloudflare Agents team",
+  "startDate": "2026-01-23T09:00:00Z",
+  "endDate": "2026-01-23T13:00:00Z",
+  "venue": {
+    "name": "Kiss the Hippo Coffee",
+    "area": "Soho",
+    "city": "London",
+    "address": "30 Golden Square, London W1F 9LD, UK",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Kiss%20the%20Hippo%20Coffee%20Soho"
+  },
+  "host": {
+    "name": "Cloudflare Developer Events",
+    "twitter": "cloudflaredev"
+  },
+  "description": "Nerd out about AI agents, swap stories with fellow builders, and get the inside scoop on what's shipping next.",
+  "swag": "Limited-edition swag while it lasts!",
+  "rsvpUrl": "https://lu.ma/18ilircs",
+  "tags": ["AI", "Agents", "Coffee"]
+}

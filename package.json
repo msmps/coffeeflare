@@ -1,0 +1,47 @@
+{
+  "name": "coffeeflare",
+  "version": "0.0.1",
+  "description": "A Cloudflare-themed coffee event announcement TUI",
+  "author": "Matt Simpson",
+  "type": "module",
+  "bin": {
+    "coffeeflare": "bin.cjs"
+  },
+  "files": [
+    "bin.cjs"
+  ],
+  "scripts": {
+    "start": "bun run src/index.tsx",
+    "dev": "bun run --watch src/index.tsx",
+    "build": "bun run build.ts"
+  },
+  "dependencies": {
+    "@opentui/core": "^0.1.74",
+    "@opentui/solid": "^0.1.74",
+    "open": "^10.2.0",
+    "solid-js": "1.9.9"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.18",
+    "typescript": "^5"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "cli",
+    "tui",
+    "cloudflare",
+    "coffee",
+    "terminal",
+    "bun"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msmps/coffeeflare"
+  },
+  "license": "MIT"
+}

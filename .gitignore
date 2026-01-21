@@ -1,0 +1,36 @@
+# dependencies
+node_modules
+
+# output
+out
+dist
+*.tgz
+bin.cjs
+
+# tree-sitter (build artifacts from @opentui/core)
+tree-sitter-*.wasm
+
+# coverage
+coverage
+*.lcov
+
+# logs
+logs
+*.log
+
+# env files
+.env
+.env.local
+.env.*.local
+
+# caches
+.eslintcache
+.cache
+*.tsbuildinfo
+
+# IDE
+.idea
+.vscode
+
+# OS
+.DS_Store
