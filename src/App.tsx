@@ -39,7 +39,7 @@ export function App(props: AppProps) {
   useKeyboard((key) => {
     if (key.name === "q" || key.name === "escape") {
       renderer.destroy()
-      return
+      process.exit(0)
     }
 
     if (phase() !== "ready") return
