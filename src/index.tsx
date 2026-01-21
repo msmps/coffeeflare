@@ -21,7 +21,9 @@ function calculateLuminance(hex: string): number | null {
 }
 
 async function main() {
-  const renderer = await createCliRenderer()
+  const renderer = await createCliRenderer({
+    exitOnCtrlC: false,
+  })
 
   let dark = true
   try {

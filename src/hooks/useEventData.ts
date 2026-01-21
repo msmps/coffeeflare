@@ -1,6 +1,7 @@
 import { createSignal, onMount, onCleanup } from "solid-js"
 import type { Event, EventState } from "../types/event"
 import eventData from "../data/event.json"
+import { registerInterval, unregisterInterval } from "../utils/intervals"
 
 function getEventState(event: Event): EventState {
   const now = new Date()
@@ -18,11 +19,16 @@ export function useEventData() {
   const [state, setState] = createSignal<EventState>(getEventState(data))
 
   onMount(() => {
-    const interval = setInterval(() => {
-      setState(getEventState(data))
-    }, 30_000)
+    const interval = registerInterval(
+      setInterval(() => {
+        setState(getEventState(data))
+      }, 30_000)
+    )
 
-    onCleanup(() => clearInterval(interval))
+    onCleanup(() => {
+      clearInterval(interval)
+      unregisterInterval(interval)
+    })
   })
 
   return { event, state }

@@ -1,5 +1,6 @@
 import { createSignal, onMount, onCleanup } from "solid-js"
 import { getCountdown, formatCountdown } from "../utils/time"
+import { registerInterval, unregisterInterval } from "../utils/intervals"
 
 export function useCountdown(targetDate: () => Date | null) {
   const [formatted, setFormatted] = createSignal("00s")
@@ -17,11 +18,19 @@ export function useCountdown(targetDate: () => Date | null) {
   onMount(() => {
     update()
 
-    const interval = setInterval(() => {
-      if (update()) clearInterval(interval)
-    }, 1000)
+    const interval = registerInterval(
+      setInterval(() => {
+        if (update()) {
+          clearInterval(interval)
+          unregisterInterval(interval)
+        }
+      }, 1000)
+    )
 
-    onCleanup(() => clearInterval(interval))
+    onCleanup(() => {
+      clearInterval(interval)
+      unregisterInterval(interval)
+    })
   })
 
   return formatted

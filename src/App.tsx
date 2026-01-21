@@ -3,6 +3,7 @@ import { useKeyboard, useRenderer } from "@opentui/solid"
 
 import { useTheme } from "./hooks/useTheme"
 import { useEventData } from "./hooks/useEventData"
+import { clearAllIntervals } from "./utils/intervals"
 import { BootSequence } from "./components/BootSequence"
 import { EventCard } from "./components/EventCard"
 import { NoEventCard } from "./components/NoEventCard"
@@ -37,7 +38,8 @@ export function App(props: AppProps) {
   }
 
   useKeyboard((key) => {
-    if (key.name === "q" || key.name === "escape") {
+    if (key.name === "q" || key.name === "escape" || (key.ctrl && key.name === "c")) {
+      clearAllIntervals()
       renderer.destroy()
       process.exit(0)
     }
