@@ -1,6 +1,6 @@
 {
   "name": "coffeeflare",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Cloudflare-themed coffee event announcement TUI",
   "author": "Matt Simpson",
   "type": "module",
